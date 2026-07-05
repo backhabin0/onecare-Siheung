@@ -47,10 +47,10 @@
 - `title.png`는 og:image / twitter:image에만 사용, 본문·배너·사례 이미지에는 사용하지 않음 (기존과 동일하게 유지)
 
 ### 5. 구조화 데이터 (JSON-LD)
-- **LocalBusiness (`Plumber` + `LocalBusiness` 복합 타입)**: 업체명, 전화번호(010-9164-6943), 서비스 지역(시흥시 및 11개 동), 가격대(40,000~200,000원, 실제 가격표 기준), 24시간 영업, 네이버 블로그 `sameAs` 포함
+- **LocalBusiness (`Plumber` + `LocalBusiness` 복합 타입)**: 업체명, 전화번호(010-9164-6943), 대표자(`founder`: 박상현), 사업자등록번호(`taxID`: 349-33-01300), 서비스 지역(시흥시 및 11개 동), 가격대(40,000~200,000원, 실제 가격표 기준), 24시간 영업, 네이버 블로그 `sameAs` 포함
 - **FAQPage**: 본문 FAQ와 동일한 5개 질문/답변
 - **BreadcrumbList**: 홈 > 시흥 누수탐지
-- 실제 사업장 주소·대표자명·사업자등록번호는 확인되지 않아 `PLACEHOLDER_...` 형태로만 남겨두었습니다 (임의 생성 금지 원칙 준수)
+- 사업장 도로명 주소는 아직 전달받지 못해 `PLACEHOLDER_STREET_ADDRESS_나중에_입력`으로 남겨두었습니다 (임의 생성 금지 원칙 준수). 주소가 확정되면 `index.html`의 `LocalBusiness.address.streetAddress` 값만 교체하면 됩니다.
 
 ### 6. 과최적화 방지
 - 키워드는 문장 속에 자연스럽게 1회씩만 녹여 배치했고, 쉼표 나열식 키워드 반복은 사용하지 않았습니다.
@@ -66,39 +66,36 @@
 
 ## 배포 후 확인할 URL
 
-- `https://CLOUDFLARE_PAGES_DOMAIN/`
-- `https://CLOUDFLARE_PAGES_DOMAIN/robots.txt`
-- `https://CLOUDFLARE_PAGES_DOMAIN/sitemap.xml`
-- `https://CLOUDFLARE_PAGES_DOMAIN/title.png`
-- `https://CLOUDFLARE_PAGES_DOMAIN/404` (존재하지 않는 경로로 접속해서 404.html이 뜨는지 확인)
+- `https://onecare-siheung.pages.dev/`
+- `https://onecare-siheung.pages.dev/robots.txt`
+- `https://onecare-siheung.pages.dev/sitemap.xml`
+- `https://onecare-siheung.pages.dev/title.png`
+- `https://onecare-siheung.pages.dev/404` (존재하지 않는 경로로 접속해서 404.html이 뜨는지 확인)
 
 ## 배포 전 실제 값으로 교체해야 하는 Placeholder 목록
 
-`index.html`의 `<head>` 안에 `<!-- SEO TODO: ... -->` 주석으로 표시되어 있습니다.
+도메인(`onecare-siheung.pages.dev`), 대표자명(박상현), 사업자등록번호(349-33-01300), 네이버 서치어드바이저 소유확인 코드는 이미 실제 값으로 반영되었습니다.
+남은 placeholder는 아래 2가지뿐입니다.
 
 | Placeholder | 위치 | 설명 |
 | --- | --- | --- |
-| `CLOUDFLARE_PAGES_DOMAIN` | canonical, OG, Twitter, JSON-LD 3종, robots.txt, sitemap.xml | 실제 배포 도메인 (예: `onecare-pipe.pages.dev` 또는 연결한 커스텀 도메인) |
-| `NAVER_VERIFICATION_CODE_나중에_입력` | `naver-site-verification` | 네이버 서치어드바이저 소유확인 코드 |
 | `GOOGLE_VERIFICATION_CODE_나중에_입력` | `google-site-verification` | Google Search Console 소유확인 코드 |
-| `PLACEHOLDER_STREET_ADDRESS_나중에_입력` | JSON-LD `LocalBusiness.address.streetAddress` | 실제 사업장 도로명 주소 |
-| `PLACEHOLDER_대표자명_나중에_입력` | 푸터 사업자 정보 문구 | 실제 대표자명 |
-| `PLACEHOLDER_사업자등록번호_나중에_입력` | 푸터 사업자 정보 문구 | 실제 사업자등록번호 |
+| `PLACEHOLDER_STREET_ADDRESS_나중에_입력` | JSON-LD `LocalBusiness.address.streetAddress` | 실제 사업장 도로명 주소 (전달받는 대로 교체) |
 
-`robots.txt`, `sitemap.xml` 안의 `CLOUDFLARE_PAGES_DOMAIN`도 함께 실제 도메인으로 교체해야 합니다.
-전화번호(010-9164-6943)와 네이버 블로그(`https://blog.naver.com/weqweq00`)는 이미 실제 값이 반영되어 있습니다.
+전화번호(010-9164-6943), 네이버 블로그(`https://blog.naver.com/weqweq00`), 네이버 소유확인 메타태그(`24cdab7c2d80b482a93d68022103ec41548f8a6e`)는 이미 실제 값이 반영되어 있습니다.
 
 ## 네이버 서치어드바이저 등록 순서
 
-1. 사이트 등록
-2. 소유확인 진행 (메타태그 방식 선택)
-3. `index.html`의 `naver-site-verification` 메타태그에 실제 코드 입력
-4. GitHub push
-5. Cloudflare Pages 배포 완료 확인
-6. URL 검사 — 페이지 접속, robots.txt/sitemap.xml 접근, 로봇 메타 `index,follow`, 제목/설명/OG/canonical/모바일 접근성 정상 노출 확인
-7. 웹 페이지 수집 요청
-8. 사이트맵 제출 (`sitemap.xml`)
-9. 네이버 검색창에서 `site:도메인`으로 색인 확인, 이후 `시흥 누수탐지` 키워드로 순위 확인
+`naver-site-verification` 메타태그는 이미 실제 코드로 반영되어 있으므로, Cloudflare Pages에 배포한 뒤 아래 순서로 바로 진행하면 됩니다.
+
+1. [네이버 서치어드바이저](https://searchadvisor.naver.com)에서 사이트 등록: `https://onecare-siheung.pages.dev/`
+2. 소유확인 진행 — "HTML 태그" 방식 선택 (이미 `index.html`에 코드가 들어가 있으므로 바로 확인 버튼 클릭)
+3. Cloudflare Pages 배포 완료 확인 (`https://onecare-siheung.pages.dev/` 정상 접속, GitHub push 후 자동 재배포되었는지 확인)
+4. 서치어드바이저에서 소유확인 완료 클릭
+5. URL 검사 — 페이지 접속, robots.txt/sitemap.xml 접근, 로봇 메타 `index,follow`, 제목/설명/OG/canonical/모바일 접근성 정상 노출 확인
+6. 웹 페이지 수집 요청
+7. 사이트맵 제출: `https://onecare-siheung.pages.dev/sitemap.xml`
+8. 며칠 뒤 네이버 검색창에서 `site:onecare-siheung.pages.dev`로 색인 확인, 이후 `시흥 누수탐지` 키워드로 순위 확인
 
 ## 최종 목표 재확인
 

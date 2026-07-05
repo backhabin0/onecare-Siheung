@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://CLOUDFLARE_PAGES_DOMAIN/sitemap.xml
+Sitemap: https://onecare-siheung.pages.dev/sitemap.xml
