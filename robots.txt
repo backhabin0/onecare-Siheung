@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://CLOUDFLARE_PAGES_DOMAIN/sitemap.xml
