@@ -74,12 +74,11 @@
 
 ## 배포 전 실제 값으로 교체해야 하는 Placeholder 목록
 
-도메인(`onecare-siheung.pages.dev`), 대표자명(박상현), 사업자등록번호(349-33-01300), 네이버 서치어드바이저 소유확인 코드는 이미 실제 값으로 반영되었습니다.
-남은 placeholder는 아래 2가지뿐입니다.
+도메인(`onecare-siheung.pages.dev`), 대표자명(박상현), 사업자등록번호(349-33-01300), 네이버 서치어드바이저 소유확인 코드, Google Search Console 소유확인 코드는 이미 실제 값으로 반영되었습니다.
+남은 placeholder는 아래 1가지뿐입니다.
 
 | Placeholder | 위치 | 설명 |
 | --- | --- | --- |
-| `GOOGLE_VERIFICATION_CODE_나중에_입력` | `google-site-verification` | Google Search Console 소유확인 코드 |
 | `PLACEHOLDER_STREET_ADDRESS_나중에_입력` | JSON-LD `LocalBusiness.address.streetAddress` | 실제 사업장 도로명 주소 (전달받는 대로 교체) |
 
 전화번호(010-9164-6943), 네이버 블로그(`https://blog.naver.com/weqweq00`), 네이버 소유확인 메타태그(`24cdab7c2d80b482a93d68022103ec41548f8a6e`)는 이미 실제 값이 반영되어 있습니다.
