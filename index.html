@@ -25,6 +25,8 @@
 <meta content="https://onecare-siheung.pages.dev/title.png" property="og:image"/>
 <meta content="https://onecare-siheung.pages.dev/title.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
+<meta content="1536" property="og:image:width"/>
+<meta content="1024" property="og:image:height"/>
 <meta content="시흥 누수탐지 전문업체 원케어 배관 24시간 상담" property="og:image:alt"/>
 <meta content="https://onecare-siheung.pages.dev/" property="og:url"/>
 <meta content="ko_KR" property="og:locale"/>
@@ -36,7 +38,7 @@
 <meta content="https://onecare-siheung.pages.dev/title.png" name="twitter:image"/>
 
 <!-- JSON-LD: LocalBusiness (Plumber) -->
-<!-- SEO TODO: 실제 사업장 도로명 주소(streetAddress) 확정되면 아래 값 교체 -->
+<!-- 실제 사업장 도로명 주소(streetAddress)를 전달받는 대로 아래 값을 교체하세요 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -131,6 +133,60 @@
         "@type": "Answer",
         "text": "탐지 결과와 현장 상태에 따라 필요한 보수 공사 범위를 안내해 드리며, 원인이 확인된 부위만 정확하게 진행합니다."
       }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: Service (주요 서비스 목록) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "serviceType": "시흥 누수탐지",
+      "name": "시흥 누수탐지",
+      "description": "장비를 활용해 누수 위치와 원인을 정확히 진단하는 시흥 지역 누수탐지 서비스입니다.",
+      "provider": { "@type": "LocalBusiness", "name": "원케어 배관" },
+      "areaServed": "시흥시",
+      "url": "https://onecare-siheung.pages.dev/#services"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "시흥 화장실 누수 진단",
+      "name": "시흥 화장실 누수 진단",
+      "description": "방수층 손상, 배수 트랩 노후 등 화장실 누수 원인을 진단하는 서비스입니다.",
+      "provider": { "@type": "LocalBusiness", "name": "원케어 배관" },
+      "areaServed": "시흥시",
+      "url": "https://onecare-siheung.pages.dev/#diagnosis"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "시흥 천장 누수 점검",
+      "name": "시흥 천장 누수 점검",
+      "description": "아랫집 천장이나 벽면 누수의 원인을 장비로 확인하는 점검 서비스입니다.",
+      "provider": { "@type": "LocalBusiness", "name": "원케어 배관" },
+      "areaServed": "시흥시",
+      "url": "https://onecare-siheung.pages.dev/#diagnosis"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "시흥 수도 배관 누수 탐지",
+      "name": "시흥 수도 배관 누수 탐지",
+      "description": "계량기 이상 회전, 요금 증가 등으로 의심되는 수도 배관 누수를 탐지하는 서비스입니다.",
+      "provider": { "@type": "LocalBusiness", "name": "원케어 배관" },
+      "areaServed": "시흥시",
+      "url": "https://onecare-siheung.pages.dev/#diagnosis"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "시흥 난방 배관 누수 상담",
+      "name": "시흥 난방 배관 누수 상담",
+      "description": "보일러 난방 배관의 압력 변화나 동파로 인한 누수를 상담하고 진단하는 서비스입니다.",
+      "provider": { "@type": "LocalBusiness", "name": "원케어 배관" },
+      "areaServed": "시흥시",
+      "url": "https://onecare-siheung.pages.dev/#causes"
     }
   ]
 }
@@ -283,7 +339,7 @@
 <header class="bg-surface dark:bg-surface-dim top-0 sticky z-50 shadow-sm border-b border-outline-variant dark:border-outline">
 <div class="max-w-container-max mx-auto px-6 py-4 flex justify-between items-center">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary dark:text-primary-fixed" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">water_drop</span>
 <p class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">원케어 배관</p>
 </div>
 <nav class="hidden md:flex items-center gap-8">
@@ -291,6 +347,7 @@
 <a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#services">전문 서비스</a>
 <a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#process">해결 프로세스</a>
 <a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#pricing">가격 안내</a>
+<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#related-services">관련 서비스</a>
 <a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#faq">자주 묻는 질문</a>
 <a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#cases">작업 사례</a>
 <a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#contact">상담 문의</a>
@@ -318,7 +375,7 @@
 <div class="text-white max-w-2xl">
 <span class="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-label-sm font-label-sm mb-6">시흥 전지역 24시간 긴급 출동</span>
 <h1 class="font-headline-xl text-headline-xl leading-tight mb-8">시흥 누수탐지,<br/>원인부터 정확하게 진단합니다</h1>
-<p class="text-body-lg mb-10 opacity-90">정왕동, 배곧, 은행동, 대야동 등 시흥 전지역 어디서든 원케어 배관이 최첨단 장비와 풍부한 현장 경험으로 누수 원인을 정확히 찾아 가장 빠르고 확실하게 해결해 드립니다.</p>
+<p class="text-body-lg mb-10 opacity-90">정왕동, 배곧, 은행동, 대야동 등 시흥 전지역 어디서든 원케어 배관이 청음식·열화상 장비와 현장 경험을 바탕으로 누수 원인을 정확하게 진단해 드립니다.</p>
 <div class="flex gap-4">
 <a class="bg-white text-primary px-8 py-4 rounded-lg font-label-md text-label-md shadow-lg hover:bg-surface transition-all active:scale-95" href="#contact">무료 상담 신청</a>
 <a class="bg-primary-container text-white px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-primary-container/90 transition-all active:scale-95" href="#pricing">가격 확인하기</a>
@@ -328,20 +385,20 @@
 <div class="hidden md:flex flex-col gap-6">
 <div class="bg-surface/90 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-5 w-80">
 <div class="bg-primary-container p-4 rounded-full">
-<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="material-symbols-outlined text-white" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">speed</span>
 </div>
 <div>
-<p class="font-headline-md text-primary text-lg">1시간 이내 도착</p>
-<p class="text-label-md text-secondary">시흥 전 지역 신속 출동</p>
+<p class="font-headline-md text-primary text-lg">빠른 지역 출동</p>
+<p class="text-label-md text-secondary">시흥 전 지역 신속 상담</p>
 </div>
 </div>
 <div class="bg-surface/90 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-5 w-80">
 <div class="bg-tertiary-container p-4 rounded-full">
-<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span class="material-symbols-outlined text-white" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
 </div>
 <div>
 <p class="font-headline-md text-tertiary-container text-lg">365일 24시간</p>
-<p class="text-label-md text-secondary">야간/공휴일 긴급 대기</p>
+<p class="text-label-md text-secondary">야간/공휴일 긴급 상담</p>
 </div>
 </div>
 </div>
@@ -351,41 +408,41 @@
 <section class="py-section-padding px-6" id="services">
 <div class="max-w-container-max mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">시흥 누수탐지 전문 서비스</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">원케어 배관은 시흥 누수탐지부터 배관 막힘 해결까지 함께 진행하는 지역 전문업체입니다. 증상에 따라 최적화된 장비와 공법을 적용해 배관의 수명을 연장시켜 드립니다.</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">시흥 누수탐지 전문 진단</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">원케어 배관은 시흥 누수탐지를 전문으로 하는 지역 업체입니다. 증상이 나타나는 위치에 따라 장비를 다르게 적용해 누수 원인을 정확히 확인해 드립니다.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 <!-- Service Card 1 -->
 <div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
 <div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-4xl">kitchen</span>
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">biotech</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-4">싱크대 막힘</h3>
-<p class="text-body-md text-on-surface-variant">기름 슬러지로 꽉 막힌 싱크대 배관을 스케일링으로 완벽하게 복구합니다.</p>
+<h3 class="font-headline-md text-headline-md mb-4">누수탐지 정밀 진단</h3>
+<p class="text-body-md text-on-surface-variant">장비로 누수 위치를 먼저 특정한 뒤 필요한 부분만 정확히 보수하는 시흥 누수탐지 서비스입니다.</p>
 </div>
 <!-- Service Card 2 -->
 <div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
 <div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-4xl">water_damage</span>
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">water_drop</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-4">하수구 배관 소통</h3>
-<p class="text-body-md text-on-surface-variant">이물질로 인한 역류 현상을 정밀 진단하여 배관 끝까지 시원하게 통수합니다.</p>
+<h3 class="font-headline-md text-headline-md mb-4">수도 배관 누수 진단</h3>
+<p class="text-body-md text-on-surface-variant">계량기 이상 회전, 요금 증가 등으로 의심되는 수도 배관 누수 위치를 장비로 확인합니다.</p>
 </div>
 <!-- Service Card 3 -->
 <div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
 <div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-4xl">wc</span>
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">bathtub</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-4">변기 막힘 해결</h3>
-<p class="text-body-md text-on-surface-variant">강력한 석션 장비와 전문 관통기를 동원하여 변기를 뜯지 않고 해결합니다.</p>
+<h3 class="font-headline-md text-headline-md mb-4">화장실 누수 진단</h3>
+<p class="text-body-md text-on-surface-variant">방수층 손상, 배수 트랩 노후 등 화장실 누수 원인을 구분해 필요한 조치를 안내합니다.</p>
 </div>
 <!-- Service Card 4 -->
 <div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
 <div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-4xl">biotech</span>
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">roofing</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-4">시흥 누수탐지</h3>
-<p class="text-body-md text-on-surface-variant">장비로 누수 위치를 먼저 특정한 뒤 필요한 부분만 정확히 보수하는 정밀 진단 서비스입니다.</p>
+<h3 class="font-headline-md text-headline-md mb-4">천장·벽면 누수 진단</h3>
+<p class="text-body-md text-on-surface-variant">아랫집 천장이나 벽면에 물이 스며들 때 원인이 배관인지 방수층인지 장비로 확인합니다.</p>
 </div>
 </div>
 </div>
@@ -400,21 +457,21 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm">
 <div class="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">plumbing</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-3">수도 배관 누수</h3>
 <p class="text-body-md text-on-surface-variant">수도 계량기가 사용하지 않을 때도 계속 돌아가거나 특정 구간의 수도 요금이 갑자기 늘었다면 벽체나 바닥 속 급수 배관에서 누수가 진행 중일 가능성이 있습니다.</p>
 </div>
 <div class="bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm">
 <div class="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">bathtub</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">bathtub</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-3">화장실 누수</h3>
 <p class="text-body-md text-on-surface-variant">욕실 방수층이나 배수 트랩 주변 실리콘이 노후되면 타일 틈이나 벽면을 따라 물이 스며들어 아랫집 천장 누수로 이어지는 경우가 많습니다.</p>
 </div>
 <div class="bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm">
 <div class="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">roofing</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">roofing</span>
 </div>
 <h3 class="font-headline-md text-headline-md mb-3">천장·벽면·바닥 누수</h3>
 <p class="text-body-md text-on-surface-variant">얼룩의 위치와 확산 속도, 곰팡이 발생 여부를 함께 살펴보면 누수인지 결로인지 구분하는 데 도움이 되며, 정확한 판단은 장비 진단으로 확인합니다.</p>
@@ -471,7 +528,7 @@
 <div class="absolute top-6 left-6 bg-primary text-white w-14 h-14 flex items-center justify-center rounded-full font-headline-lg shadow-xl">02</div>
 </div>
 <h3 class="font-headline-md text-headline-md mb-4">열화상·압력 테스트 &amp; 보수</h3>
-<p class="text-body-lg text-on-surface-variant">열화상 카메라와 배관 압력 테스트로 누수 구간을 다시 한번 교차 확인한 뒤, 강력한 회전 노즐과 고압 수압으로 배관 내벽의 슬러지와 이물질을 완벽하게 제거합니다.</p>
+<p class="text-body-lg text-on-surface-variant">열화상 카메라와 배관 압력 테스트로 누수 구간을 다시 한번 교차 확인한 뒤, 확인된 원인 부위만 정확하게 보수해 불필요한 철거를 줄입니다.</p>
 </div>
 </div>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mt-12">탐지 결과에 따라 필요한 보수 범위를 먼저 안내해 드리며, 불필요한 철거나 공사 없이 원인이 확인된 부위만 정확하게 해결해 드립니다.</p>
@@ -486,36 +543,37 @@
 <div class="max-w-4xl mx-auto overflow-hidden rounded-[2rem] shadow-2xl border border-outline-variant">
 <div class="bg-primary py-10">
 <p class="text-white font-label-md uppercase tracking-[0.2em] opacity-80 mb-4">ONE-CARE STANDARD PRICING</p>
-<h3 class="text-white font-headline-lg">합리적인 비용으로 최상의 해결책을 제공합니다</h3>
+<h3 class="text-white font-headline-lg">현장 상황에 맞는 정직한 비용을 안내드립니다</h3>
 </div>
 <div class="bg-white p-12 space-y-8">
 <div class="flex justify-between items-center border-b border-outline-variant pb-6">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary text-3xl">wc</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">biotech</span>
+<span class="font-headline-md">시흥 누수탐지 (장비 진단)</span>
+</div>
+<span class="font-headline-md text-primary text-3xl">200,000원 ~</span>
+</div>
+<p class="text-label-sm font-label-sm text-secondary text-left uppercase tracking-[0.15em] pt-2">관련 배관 서비스</p>
+<div class="flex justify-between items-center border-b border-outline-variant pb-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">wc</span>
 <span class="font-headline-md">변기 막힘 단순 통수</span>
 </div>
 <span class="font-headline-md text-primary text-3xl">40,000원 ~</span>
 </div>
 <div class="flex justify-between items-center border-b border-outline-variant pb-6">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary text-3xl">kitchen</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">kitchen</span>
 <span class="font-headline-md">싱크대 배관 스케일링</span>
 </div>
 <span class="font-headline-md text-primary text-3xl">50,000원 ~</span>
 </div>
-<div class="flex justify-between items-center border-b border-outline-variant pb-6">
+<div class="flex justify-between items-center">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary text-3xl">water_drop</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">water_drop</span>
 <span class="font-headline-md">하수구 배관 소통</span>
 </div>
 <span class="font-headline-md text-primary text-3xl">70,000원 ~</span>
-</div>
-<div class="flex justify-between items-center">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary text-3xl">biotech</span>
-<span class="font-headline-md">시흥 누수탐지 (장비 진단)</span>
-</div>
-<span class="font-headline-md text-primary text-3xl">200,000원 ~</span>
 </div>
 </div>
 <div class="bg-secondary-container p-6">
@@ -540,6 +598,38 @@
 <span class="bg-surface border border-outline-variant px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant">신천동</span>
 <span class="bg-surface border border-outline-variant px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant">매화동</span>
 <span class="bg-surface border border-outline-variant px-4 py-2 rounded-full text-label-md font-label-md text-on-surface-variant">연성동</span>
+</div>
+</div>
+</section>
+<!-- Related Plumbing Services -->
+<section class="py-section-padding px-6" id="related-services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">관련 배관 서비스 안내</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">원케어 배관은 시흥 누수탐지를 중심으로, 상담 중 함께 문의가 많은 배관 막힘 관련 서비스도 함께 안내해 드립니다.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+<div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">kitchen</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">싱크대 막힘</h3>
+<p class="text-body-md text-on-surface-variant">기름 슬러지로 막힌 싱크대 배관을 스케일링 장비로 뚫어 드립니다.</p>
+</div>
+<div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">water_damage</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">하수구 배관 소통</h3>
+<p class="text-body-md text-on-surface-variant">이물질로 인한 역류 현상을 확인하여 배관 끝까지 통수 작업을 진행합니다.</p>
+</div>
+<div class="bento-card bg-surface p-8 rounded-3xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-secondary-container flex items-center justify-center rounded-2xl mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" aria-hidden="true">wc</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">변기 막힘 해결</h3>
+<p class="text-body-md text-on-surface-variant">석션 장비와 전문 관통기를 활용해 변기를 뜯지 않고 해결을 시도합니다.</p>
+</div>
 </div>
 </div>
 </section>
@@ -578,39 +668,49 @@
 <section class="py-section-padding px-6" id="cases">
 <div class="max-w-container-max mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">작업 사례 예시</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">시흥 누수탐지 및 배관 작업 현장 사진입니다. 실제 현장 사진은 추후 최종 이미지로 교체될 수 있습니다.</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">시흥 누수탐지 작업 사례</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">시흥 누수탐지 및 배관 작업 현장 사진입니다. 현장 상태에 따라 점검 방식과 작업 범위가 달라질 수 있으며, 상담 시 증상과 위치를 확인해 안내드립니다.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 누수탐지 현장 작업 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">현장 점검 사례</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 화장실 누수 점검 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_01.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">화장실 누수 원인 점검</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 천장 누수 원인 진단 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_02.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">천장 누수 증상 확인</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 배관 누수탐지 작업 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_03.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">배관 누수 상담 사례</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 수도 누수 탐지 현장 사진" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_04.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">수도 배관 압력 테스트</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 아파트 누수탐지 작업 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_05.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">아파트 누수 현장 확인</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 누수 공사 진행 현장" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_06.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">누수 보수 공사 현장</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 배관 교체 작업 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_07.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">노후 배관 교체 사례</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 누수탐지 장비 진단 현장" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_08.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">장비 정밀 진단 현장</p>
 </div>
 <div class="bento-card overflow-hidden rounded-2xl border border-outline-variant shadow-sm bg-surface">
 <img alt="시흥 전지역 누수탐지 출동 사례" class="w-full h-40 sm:h-48 object-cover" loading="lazy" src="./images/KakaoTalk_20260629_184528616_09.jpg"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-center py-3">시흥 전지역 출동 사례</p>
 </div>
 </div>
 </div>
@@ -624,7 +724,7 @@
 <div class="space-y-10">
 <div class="flex items-start gap-6">
 <div class="bg-primary p-4 rounded-2xl shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="material-symbols-outlined text-white text-3xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">call</span>
 </div>
 <div class="flex items-center gap-4 flex-wrap">
 <div>
@@ -632,18 +732,18 @@
 <p class="font-headline-md text-primary text-3xl font-bold">010-9164-6943</p>
 </div>
 <a class="inline-flex items-center gap-2 bg-[#03C75A] text-white px-4 py-2 rounded-full font-label-md text-label-md active:scale-95 transition-transform" href="https://blog.naver.com/weqweq00" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-lg">chat</span>
+<span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
                         네이버 블로그
                     </a>
 </div>
 </div>
 <div class="flex items-start gap-6">
 <div class="bg-primary p-4 rounded-2xl shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="material-symbols-outlined text-white text-3xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">verified_user</span>
 </div>
 <div>
 <p class="text-label-md text-secondary mb-1">품질 보증 서비스</p>
-<p class="font-headline-md text-xl">작업 후 동일 증상 발생 시 100% 무상 AS 보장</p>
+<p class="font-headline-md text-xl">작업 후 동일 증상 발생 시 상담 및 사후 점검을 안내드립니다</p>
 </div>
 </div>
 </div>
@@ -665,8 +765,10 @@
 <select class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white">
 <option>서비스를 선택하세요</option>
 <option>누수탐지</option>
-<option>하수구 막힘</option>
-<option>싱크대 막힘</option>
+<option>화장실 누수</option>
+<option>천장 누수</option>
+<option>수도 배관 누수</option>
+<option>관련 배관 서비스(막힘 등)</option>
 <option>기타 문의</option>
 </select>
 </div>
@@ -688,10 +790,10 @@
 <footer class="w-full bg-surface-container-highest px-6 py-16 text-center border-t border-outline-variant">
 <div class="max-w-container-max mx-auto flex flex-col items-center gap-8">
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">water_drop</span>
 <p class="font-headline-lg text-primary">원케어 배관</p>
 </div>
-<p class="font-body-lg text-on-surface-variant max-w-xl opacity-80">시흥 누수탐지 전문업체 원케어 배관이 정왕동, 배곧, 은행동 등 시흥 전 지역의 누수와 막힘을 완벽하게 해결합니다.<br/>고객님의 믿음에 정직한 실력으로 보답하겠습니다.</p>
+<p class="font-body-lg text-on-surface-variant max-w-xl opacity-80">시흥 누수탐지 전문업체 원케어 배관이 정왕동, 배곧, 은행동 등 시흥 전 지역의 누수 원인을 장비로 정확하게 진단하고 해결해 드립니다.<br/>고객님의 믿음에 정직한 실력으로 보답하겠습니다.</p>
 <div class="flex flex-wrap justify-center gap-8 border-y border-outline-variant py-6 w-full max-w-2xl">
 <a class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-colors cursor-pointer" href="#">이용약관</a>
 <a class="text-primary font-bold underline cursor-pointer" href="#">개인정보처리방침</a>
@@ -705,10 +807,10 @@
 </footer>
 <!-- Floating Action Buttons (FAB) -->
 <a class="fixed bottom-10 right-32 w-16 h-16 bg-[#03C75A] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40" href="https://blog.naver.com/weqweq00" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="material-symbols-outlined text-4xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">chat</span>
 </a>
 <a class="fixed bottom-10 right-10 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40" href="tel:01091646943">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+<span class="material-symbols-outlined text-4xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
 </a>
 <script>
         // Micro-interactions and scroll animation
